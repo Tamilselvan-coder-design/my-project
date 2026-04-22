@@ -10,6 +10,7 @@ import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
 import DashboardPage from './pages/DashboardPage'
 import LoansPage from './pages/LoansPage'
+import LendingPage from './pages/LendingPage'
 import PaymentsPage from './pages/PaymentsPage'
 import AIAdvisorPage from './pages/AIAdvisorPage'
 import ChatbotPage from './pages/ChatbotPage'
@@ -55,6 +56,7 @@ export default function App() {
         <Route path="/" element={<Navigate to="/dashboard" replace />} />
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/loans" element={<LoansPage />} />
+        <Route path="/lending" element={<LendingPage />} />
         <Route path="/payments" element={<PaymentsPage />} />
         <Route path="/bank" element={<BankPage />} />
         <Route path="/advisor" element={<AIAdvisorPage />} />

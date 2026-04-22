@@ -17,6 +17,7 @@ const { scheduleEMIReminders } = require('./services/cronService');
 const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/users');
 const loanRoutes = require('./routes/loans');
+const lendingRoutes = require('./routes/lending');
 const paymentRoutes = require('./routes/payments');
 const bankRoutes = require('./routes/bank');
 const aiRoutes = require('./routes/ai');
@@ -69,6 +70,7 @@ app.use(morgan('combined', { stream: { write: (msg) => logger.info(msg.trim()) }
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/users', userRoutes);
 app.use('/api/v1/loans', loanRoutes);
+app.use('/api/v1/lending', lendingRoutes);
 app.use('/api/v1/payments', paymentRoutes);
 app.use('/api/v1/bank', bankRoutes);
 app.use('/api/v1/ai', aiRoutes);

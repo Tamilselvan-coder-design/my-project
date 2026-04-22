@@ -42,6 +42,18 @@ const loanSchema = Joi.object({
   notes: Joi.string().max(500).optional().allow(''),
 });
 
+// ─── Lending Schema (P2P) ─────────────────────────────────────────────────────
+const lendingSchema = Joi.object({
+  borrowerEmail: Joi.string().email().required(),
+  amount: Joi.number().min(1).required(),
+  interestRate: Joi.number().min(0).max(50).default(0),
+  tenureMonths: Joi.number().integer().min(1).required(),
+  purpose: Joi.string().max(500).optional().allow(''),
+  notes: Joi.string().max(1000).optional().allow(''),
+  startDate: Joi.date().optional(),
+  dueDate: Joi.date().required(),
+});
+
 // ─── Profile Schema ───────────────────────────────────────────────────────────
 const profileSchema = Joi.object({
   name: Joi.string().min(2).max(60).optional(),
@@ -69,5 +81,5 @@ const bankAccountSchema = Joi.object({
 
 module.exports = {
   validate,
-  schemas: { registerSchema, loginSchema, loanSchema, profileSchema, bankAccountSchema },
+  schemas: { registerSchema, loginSchema, loanSchema, lendingSchema, profileSchema, bankAccountSchema },
 };
