@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useState, useEffect } from 'react'
 import {
   LayoutDashboard, CreditCard, Wallet, Building2,
-  Bot, MessageSquare, User, LogOut, Menu, X, Bell, TrendingDown, HandCoins
+  Bot, MessageSquare, User, LogOut, Menu, X, Bell, TrendingDown, Coins
 } from 'lucide-react'
 import { logout } from '../../store/slices/authSlice'
 import api from '../../api/axios'
@@ -11,7 +11,7 @@ import api from '../../api/axios'
 const NAV = [
   { to: '/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
   { to: '/loans', icon: CreditCard, label: 'Loans' },
-  { to: '/lending', icon: HandCoins, label: 'P2P Lending' },
+  { to: '/lending', icon: Coins, label: 'P2P Lending' },
   { to: '/payments', icon: Wallet, label: 'Payments' },
   { to: '/bank', icon: Building2, label: 'Bank Accounts' },
   { to: '/advisor', icon: TrendingDown, label: 'AI Advisor' },

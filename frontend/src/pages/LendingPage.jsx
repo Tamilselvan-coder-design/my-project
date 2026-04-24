@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchLendings, createLending, recordPayment, deleteLending } from '../store/slices/lendingSlice'
-import { Plus, HandCoins, ArrowDownLeft, ArrowUpRight, Trash2, DollarSign, Calendar, User, Percent } from 'lucide-react'
+import { Plus, Coins, ArrowDownLeft, ArrowUpRight, Trash2, DollarSign, Calendar, User, Percent } from 'lucide-react'
 import toast from 'react-hot-toast'
 
 const fmt = (n) => `₹${Number(n || 0).toLocaleString('en-IN')}`
